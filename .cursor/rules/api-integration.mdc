@@ -1,0 +1,14 @@
+---
+description: API integration standards for XR5.0 chat endpoint usage
+globs: src/services/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# API Integration
+
+- Configure API access using `VITE_CHAT_API_BASE_URL` and `VITE_CHAT_API_TOKEN`.
+- Never hardcode tokens, secrets, or private URLs.
+- Use `POST /api/chat` for chat requests unless requirements explicitly change.
+- Add `Authorization: Bearer <token>` when a token exists.
+- Handle `401`, `400/422`, `500`, and network failures with friendly, actionable messages.
+- Parse and validate backend responses defensively according to the OpenAPI schema.

@@ -1,0 +1,12 @@
+---
+description: Code quality and maintainability expectations
+alwaysApply: true
+---
+
+# Code Quality
+
+- Prefer simple, maintainable solutions over clever abstractions.
+- Avoid introducing libraries unless they solve a clear recurring need.
+- Keep naming clear, descriptive, and consistent across modules.
+- Make error handling explicit instead of silently swallowing failures.
+- Update README documentation when behavior, setup, or configuration changes.

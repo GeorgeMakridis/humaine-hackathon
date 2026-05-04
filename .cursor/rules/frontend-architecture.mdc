@@ -1,0 +1,14 @@
+---
+description: Frontend architecture conventions for React TypeScript Vite
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Frontend Architecture
+
+- Use React + TypeScript + Vite project conventions.
+- Keep components small, focused, and reusable.
+- Put API clients and HTTP logic in `src/services/`.
+- Put shared domain and transport types in `src/types/`.
+- Put response parsing and normalization in `src/utils/`.
+- Keep rendering and side effects separate; do not mix UI markup with API call logic.

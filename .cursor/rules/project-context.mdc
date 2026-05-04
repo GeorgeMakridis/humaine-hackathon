@@ -1,0 +1,12 @@
+---
+description: Project context and core priorities for the HumAIne hackathon chatbot
+alwaysApply: true
+---
+
+# HumAIne Hackathon Chatbot Context
+
+- Build for students participating in the HumAIne hackathon.
+- Support development of the XAI Active Learning notebook workflow.
+- Assume frontend interactions are backed by the XR5.0 LLM Engine API.
+- Prioritize clarity, explainability, usability, and robustness in every change.
+- Prefer outputs that are understandable to non-expert users under time pressure.

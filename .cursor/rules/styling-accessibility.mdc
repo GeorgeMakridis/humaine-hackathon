@@ -1,0 +1,14 @@
+---
+description: Styling and accessibility standards for chat UI
+globs: src/**/*.{css,ts,tsx}
+alwaysApply: false
+---
+
+# Styling and Accessibility
+
+- Use Tailwind CSS for styling patterns and consistency.
+- Keep layouts responsive across laptop and desktop hackathon setups.
+- Use semantic HTML for structure and assistive technologies.
+- Add `aria-label` attributes for interactive controls lacking visible text labels.
+- Maintain strong contrast, readable spacing, and clear visual hierarchy.
+- Keep visual design aligned with a clean research-project and hackathon style.

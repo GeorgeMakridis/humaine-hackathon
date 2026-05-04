@@ -1,0 +1,13 @@
+---
+description: React and TypeScript implementation guidance
+globs: src/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# React and TypeScript
+
+- Keep TypeScript strict and prefer explicit typing.
+- Avoid `any` unless unavoidable; use `unknown` with type guards where possible.
+- Define clear interfaces for chat messages, API requests, API responses, and source documents.
+- Keep component state predictable and local unless cross-tree sharing is clearly required.
+- Add comments only when they improve maintainability or clarify non-obvious logic.

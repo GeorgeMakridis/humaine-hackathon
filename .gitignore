@@ -1,0 +1,22 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Dependencies and build output
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+*.local
+
+# Logs and OS
+*.log
+.DS_Store
+Thumbs.db
+
+# IDE (keep .cursor/rules if you want them shared — uncomment next line to ignore all of .cursor)
+# .cursor/

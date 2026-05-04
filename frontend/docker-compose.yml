@@ -1,0 +1,22 @@
+services:
+  proxy:
+    build:
+      context: ./proxy
+    environment:
+      PORT: 3001
+      XR_API_BASE_URL: ${XR_API_BASE_URL:-https://chat-api.xr50.eu}
+      XR_API_TOKEN: ${XR_API_TOKEN:-}
+    expose:
+      - "3001"
+
+  web:
+    build:
+      context: .
+      args:
+        VITE_CHAT_API_BASE_URL: ${VITE_CHAT_API_BASE_URL:-https://chat-api.xr50.eu}
+        VITE_CHAT_API_TOKEN: ${VITE_CHAT_API_TOKEN:-}
+        VITE_USE_PROXY: ${VITE_USE_PROXY:-true}
+    ports:
+      - "8080:80"
+    depends_on:
+      - proxy
