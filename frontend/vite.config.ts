@@ -6,6 +6,8 @@ export default defineConfig(({ mode }) => {
   const useProxy = env.VITE_USE_PROXY === "true";
   const target = env.VITE_CHAT_API_BASE_URL ?? "https://chat-api.xr50.eu";
 
+  const apiToken = env.VITE_CHAT_API_TOKEN ?? "";
+
   return {
     plugins: [react()],
     server: {
@@ -14,6 +16,13 @@ export default defineConfig(({ mode }) => {
             "/api/chat": {
               target,
               changeOrigin: true,
+              configure: (proxy) => {
+                proxy.on("proxyReq", (proxyReq) => {
+                  if (apiToken) {
+                    proxyReq.setHeader("Authorization", `Bearer ${apiToken}`);
+                  }
+                });
+              },
             },
           }
         : undefined,

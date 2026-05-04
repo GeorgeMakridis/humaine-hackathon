@@ -20,11 +20,11 @@ export const ChatInput = ({ loading, onSend, onClear }: ChatInputProps) => {
   };
 
   return (
-    <footer className="border-t border-slate-200 bg-white px-4 py-3 sm:px-6">
+    <footer className="border-t border-humaine-line bg-humaine-panel px-4 py-3 shadow-[0_-4px_24px_rgba(17,17,17,0.04)] sm:px-6">
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-2">
         <textarea
           aria-label="Chat input"
-          placeholder="Ask about XAI, active learning, uncertainty sampling..."
+          placeholder="Ask about XAI, active learning, uncertainty sampling…"
           value={value}
           onChange={(event) => setValue(event.target.value)}
           onKeyDown={(event) => {
@@ -33,14 +33,14 @@ export const ChatInput = ({ loading, onSend, onClear }: ChatInputProps) => {
               void submit();
             }
           }}
-          className="min-h-24 w-full rounded-xl border border-slate-300 px-3 py-2 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+          className="min-h-24 w-full rounded-xl border border-humaine-line bg-humaine-subtle/50 px-3 py-2 text-sm text-humaine-ink outline-none transition placeholder:text-humaine-muted/80 focus:border-humaine-brand focus:ring-2 focus:ring-humaine-brand/25"
         />
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-2">
           <button
             type="button"
             aria-label="Clear conversation"
             onClick={onClear}
-            className="rounded-md border border-slate-300 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50"
+            className="rounded-lg border border-humaine-line bg-humaine-panel px-3 py-2 text-sm font-semibold text-humaine-muted transition hover:border-humaine-brand/40 hover:text-humaine-ink"
           >
             Clear conversation
           </button>
@@ -49,7 +49,7 @@ export const ChatInput = ({ loading, onSend, onClear }: ChatInputProps) => {
             aria-label="Send message"
             onClick={() => void submit()}
             disabled={loading}
-            className="rounded-md bg-blue-700 px-4 py-2 text-sm font-medium text-white disabled:cursor-not-allowed disabled:opacity-60"
+            className="rounded-lg bg-humaine-brand px-5 py-2 text-sm font-bold text-white shadow-sm transition hover:bg-humaine-brand-hover disabled:cursor-not-allowed disabled:opacity-55"
           >
             Send
           </button>

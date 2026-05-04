@@ -11,8 +11,10 @@ export const ChatMessage = ({ message }: ChatMessageProps) => {
   return (
     <article className={`flex ${isUser ? "justify-end" : "justify-start"}`}>
       <div
-        className={`max-w-[90%] rounded-2xl px-4 py-3 text-sm leading-relaxed sm:max-w-[80%] ${
-          isUser ? "bg-blue-700 text-white" : "border border-slate-200 bg-white text-slate-900"
+        className={`max-w-[90%] rounded-2xl px-4 py-3 text-sm leading-relaxed shadow-sm sm:max-w-[80%] ${
+          isUser
+            ? "bg-humaine-brand text-white shadow-card"
+            : "border border-humaine-line bg-humaine-panel text-humaine-ink shadow-card"
         }`}
       >
         <p className="whitespace-pre-wrap">{message.content}</p>

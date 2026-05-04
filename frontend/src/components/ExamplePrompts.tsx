@@ -13,15 +13,15 @@ interface ExamplePromptsProps {
 
 export const ExamplePrompts = ({ onSelect }: ExamplePromptsProps) => {
   return (
-    <div className="mx-auto w-full max-w-5xl px-4 pt-2 sm:px-6">
-      <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-500">Example prompts</p>
+    <div className="mx-auto w-full max-w-5xl px-4 pt-3 sm:px-6">
+      <p className="mb-2 text-xs font-bold uppercase tracking-[0.14em] text-humaine-muted">Example prompts</p>
       <div className="flex flex-wrap gap-2">
         {PROMPTS.map((prompt) => (
           <button
             key={prompt}
             type="button"
             onClick={() => onSelect(prompt)}
-            className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-sm text-slate-700 transition hover:border-blue-300 hover:text-blue-700"
+            className="rounded-full border border-humaine-line bg-humaine-panel px-3 py-1.5 text-left text-sm font-medium text-humaine-ink shadow-sm transition hover:border-humaine-brand hover:text-humaine-brand"
           >
             {prompt}
           </button>

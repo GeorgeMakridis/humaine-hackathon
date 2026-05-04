@@ -8,16 +8,10 @@ body,
   min-height: 100%;
 }
 
-body {
-  margin: 0;
-  font-family:
-    Inter,
-    system-ui,
-    -apple-system,
-    Segoe UI,
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif;
-  @apply bg-slate-50 text-slate-900;
+@layer base {
+  body {
+    margin: 0;
+    @apply bg-humaine-subtle font-sans text-humaine-ink antialiased;
+    background-image: linear-gradient(180deg, #f4f6fb 0%, #ffffff 38%, #ffffff 100%);
+  }
 }

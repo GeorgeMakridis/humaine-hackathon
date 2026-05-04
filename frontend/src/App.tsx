@@ -90,15 +90,26 @@ function App() {
       <Header />
       {canShowChips ? <ExamplePrompts onSelect={(prompt) => void handleSend(prompt)} /> : null}
       {error ? (
-        <div className="mx-auto mt-3 w-full max-w-5xl rounded border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-800">
+        <div className="mx-auto mt-3 w-full max-w-5xl rounded-lg border border-red-200/90 bg-red-50 px-4 py-3 text-sm text-red-900 shadow-sm">
           {error}
         </div>
       ) : null}
       <ChatWindow messages={messages} loading={loading} />
       <ChatInput loading={loading} onSend={handleSend} onClear={handleClear} />
-      <p className="border-t border-slate-200 bg-white px-4 py-2 text-center text-xs text-slate-500">
-        Supporting students in XAI and Active Learning notebook development
-      </p>
+      <footer className="border-t border-humaine-ink/10 bg-humaine-ink px-4 py-3 text-center text-xs text-white/90 sm:px-6">
+        <p>
+          Supporting students in XAI and Active Learning notebook development — aligned with the{" "}
+          <a
+            className="font-semibold text-white underline decoration-humaine-brand decoration-2 underline-offset-2 hover:text-humaine-brand"
+            href="https://humaine-horizon.eu/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            HumAIne project
+          </a>
+          .
+        </p>
+      </footer>
     </main>
   );
 }

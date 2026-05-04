@@ -21,8 +21,14 @@ export const ChatWindow = ({ messages, loading }: ChatWindowProps) => {
           <ChatMessage key={message.id} message={message} />
         ))}
         {loading ? (
-          <div className="max-w-[80%] rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-600">
-            Assistant is thinking...
+          <div className="max-w-[80%] rounded-2xl border border-humaine-line bg-humaine-panel px-4 py-3 text-sm text-humaine-muted shadow-card">
+            <span className="inline-flex items-center gap-2">
+              <span
+                className="inline-block h-2 w-2 animate-pulse rounded-full bg-humaine-brand"
+                aria-hidden="true"
+              />
+              Assistant is thinking…
+            </span>
           </div>
         ) : null}
         <div ref={bottomRef} />
