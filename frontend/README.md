@@ -62,6 +62,10 @@ User-friendly messages are shown for:
 - `500`: backend error
 - network failures / unreachable backend
 
+## Troubleshooting
+
+- **LAN access over `http://` (e.g. `http://192.168.x.x:8080`):** Browsers only expose `crypto.randomUUID()` in a [secure context](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts). Older builds could throw `randomUUID is not a function` when opening the app by LAN IP. This app generates message IDs with a fallback when `randomUUID` is unavailable. For production you should still prefer HTTPS when possible (tokens, mixed content, and other APIs).
+
 ## Docker Deployment (Shared Hackathon URL)
 
 Build and run:

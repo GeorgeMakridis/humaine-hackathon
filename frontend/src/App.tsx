@@ -5,6 +5,7 @@ import { ExamplePrompts } from "./components/ExamplePrompts";
 import { Header } from "./components/Header";
 import { sendChatMessage } from "./services/chatApi";
 import type { ChatMessage } from "./types/chat";
+import { createId } from "./utils/createId";
 
 const STORAGE_KEY = "humaine-chat-history";
 
@@ -45,7 +46,7 @@ function App() {
 
   const handleSend = async (text: string) => {
     const userMessage: ChatMessage = {
-      id: crypto.randomUUID(),
+      id: createId(),
       role: "user",
       content: text,
       createdAt: new Date().toISOString(),
@@ -60,7 +61,7 @@ function App() {
     try {
       const result = await sendChatMessage({ query: text });
       const assistantMessage: ChatMessage = {
-        id: crypto.randomUUID(),
+        id: createId(),
         role: "assistant",
         content: result.answer,
         createdAt: new Date().toISOString(),
